@@ -2,7 +2,7 @@
     Export constants from here
 */
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = "https://www.expat.com";
 const requestHeaders = {
     Accept: "application/json",
     "Content-Type": "application/json",

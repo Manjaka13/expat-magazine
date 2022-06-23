@@ -3,7 +3,7 @@
 */
 
 const ws = {
-	news: "data/news.json",
+	news: "dataset.php",
 };
 
 export default ws;
