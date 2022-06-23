@@ -6,6 +6,7 @@ const baseUrl = "https://www.expat.com";
 const requestHeaders = {
     Accept: "application/json",
     "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "https://www.expat.com"
 };
 const defaultType = "All types";
 const dateOrderList = ["Newest article", "Oldest article"];
