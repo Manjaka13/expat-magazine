@@ -9,5 +9,15 @@ module.exports = defineConfig({
 				args[0].description = "Browse through a list of the latest news on news.expat.com and stay up to date with the latest information from around the world.";
 				return args;
 			})
+	},
+	devServer: {
+		proxy: {
+			"/api": {
+				target: "https://www.expat.com",
+				pathRewrite: { '^/api': '' },
+				changeOrigin: true,
+				secure: false
+			}
+		}
 	}
 });

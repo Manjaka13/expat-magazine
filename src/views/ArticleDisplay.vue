@@ -4,7 +4,7 @@
 			<div class="article-display__head">
 				<h2 class="article-display__title">{{ article.title }}</h2>
 				<figure class="article-display__image">
-					<img class="image" v-lazy="article.image" :alt="article.title" />
+					<img class="image" v-lazy="article.images" :alt="article.title" />
 				</figure>
 			</div>
 			<p class="article-display__intro" v-html="processDescription()"></p>
