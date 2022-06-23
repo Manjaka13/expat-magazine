@@ -1,0 +1,90 @@
+/*
+    Styles for filter
+*/
+
+.navbar-filter {
+	@include flex-row(initial, center);
+	@include transition;
+	background: $color-1;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px rgba(0, 0, 0, 0.1) solid;
+
+	@include screen-x(900px) {
+		@include flex-row(center, center);
+		position: fixed;
+		top: $navbar-height;
+		left: 0;
+		width: 100%;
+		margin: 0;
+		opacity: 0;
+		pointer-events: none;
+		padding: 5px 0;
+		border-bottom: 1px rgba(0, 0, 0, 0.6) solid;
+		border-radius: 0;
+		box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.6);
+
+		&--shown {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	&__form {
+		@include flex-row(initial, center);
+		font-size: 0.9em;
+		@include screen-x(560px) {
+			@include flex-col(initial, initial);
+			width: calc(100% - 20px);
+		}
+		.select,
+		.input {
+			padding: 5px 10px;
+			border: none;
+			background: $color-4;
+			color: $color-2;
+		}
+		.input {
+			border: 1px rgba(0, 0, 0, 0.4) solid;
+			padding-right: 35px;
+			@include screen-x(560px) {
+				width: 100%;
+			}
+		}
+		.group {
+			@include flex-col(initial, initial);
+			margin-left: 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+			@include screen-x(560px) {
+				margin-left: 0;
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.label {
+			@include no-select;
+			margin-bottom: 5px;
+			font-weight: bold;
+			color: $color-2;
+		}
+	}
+
+	&__input {
+		position: relative;
+		@include flex-row(initial, center);
+		.icon {
+			position: absolute;
+			font-size: 1.3em;
+			color: $color-3;
+			right: 10px;
+			&--remove {
+				color: red;
+				cursor: pointer;
+			}
+		}
+	}
+}

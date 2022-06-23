@@ -1,0 +1,18 @@
+/*
+    Import styles from here
+*/
+
+// Base styles
+@import "@/styles/base/vars.scss";
+@import "@/styles/base/mixins.scss";
+@import "@/styles/base/scaffolding.scss";
+
+// Component styles
+@import "@/styles/Navbar.scss";
+@import "@/styles/NavbarFilter.scss";
+@import "@/styles/NewsCard.scss";
+@import "@/styles/NewsList.scss";
+@import "@/styles/SocialArea.scss";
+@import "@/styles/LoadingSpinner.scss";
+@import "@/styles/LoadingNews.scss";
+@import "@/styles/ArticleDisplay.scss";

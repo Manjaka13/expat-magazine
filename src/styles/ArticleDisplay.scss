@@ -1,0 +1,92 @@
+/*
+    Article page styles
+*/
+
+.article-display {
+	width: 100%;
+	min-height: calc(100vh - $navbar-height);
+
+	&__head {
+		padding-top: calc($navbar-height + 40px);
+		position: relative;
+		width: 100%;
+		background: $color-1;
+	}
+
+	&__title {
+		font-size: 4em;
+		color: $color-2;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		color: white;
+		text-shadow: 2px 2px 4px black;
+		padding: 50px;
+		// text-align: justify;
+		@include screen-x(1700px) {
+			font-size: 3em;
+		}
+		@include screen-x(1200px) {
+			padding: 25px;
+		}
+		@include screen-x(800px) {
+			position: initial;
+			padding: 0;
+			padding-bottom: 50px;
+			color: $color-2;
+			text-shadow: none;
+		}
+		@include screen-x(600px) {
+			font-size: 2em;
+			padding-bottom: 40px;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		.image {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__intro,
+	&__body {
+		line-height: 25px;
+		text-align: justify;
+	}
+
+	&__intro {
+		color: $color-2;
+		padding: 20px 0;
+		padding-bottom: 50px;
+	}
+
+	&__body {
+		color: $color-3;
+		padding-bottom: 50px;
+		p {
+			padding-bottom: 20px;
+			line-height: 25px;
+			text-align: justify;
+		}
+		h2 {
+			line-height: 46px;
+			color: $color-2;
+			text-align: left;
+			padding-bottom: 20px;
+			@include screen-x(600px) {
+				line-height: 37px;
+				font-size: 1.8em;
+			}
+		}
+		a {
+			@include transition;
+			font-weight: bold;
+			color: rgb(0, 119, 255);
+			&:hover {
+				color: darken(rgb(0, 119, 255), 20%);
+			}
+		}
+	}
+}
